@@ -1,0 +1,104 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        
+        <title>Frontend Mentor | Calculator app</title>
+
+        <!--FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+        <!--CSS-->
+        <link rel="stylesheet" href="./CSS/reset.css">
+        <link rel="stylesheet" href="./CSS/styles.css">
+
+        <!--JS-->
+        <script src="./JS/script.js" defer></script>
+    </head>
+
+    <main class="container">
+        <header>
+            <img src="./images/logo.png" alt="" class="logo" height="25px">
+            <div class="turn"><span class="player" id="turn">X</span> turn</div>
+            <div class="restart" id="restart">
+                <img src="./images/return.png" alt="" class="restart-icon restart" height="25px">
+            </div>
+            
+        </header>
+
+        <table class="gameboard">
+            <tr>
+                <td class="a 1 d1 tile" id="a1"></td>
+                <td class="a 2 tile" id="a2"></td>
+                <td class="a 3 d2 tile" id="a3"></td>
+            </tr>
+            <tr>
+                <td class="b 1 tile" id="b1"></td>
+                <td class="b 2 d1 d2 tile" id="b2"></td>
+                <td class="b 3 tile" id="b3"></td>
+            </tr>
+            <tr>
+                <td class="c 1 d2 tile" id="c1"></td>
+                <td class="c 2 tile" id="c2"></td>
+                <td class="c 3 d1 tile" id="c3"></td>
+            </tr>
+            <tr class="scores">
+                <td class="won-macthes"> 
+                    <div class="player">
+                        <div class="description">X (YOU)</div>
+                        <div class="info" id="player-score">00</div>
+                    </div>
+                </td>
+                <td class="tied-matches">
+                    <div class="tied">
+                        <div class="description">TIES</div>
+                        <div class="info" id="tied-score">00</div>
+                    </div>
+                </td>
+                <td class="lost-matches">
+                    <div class="player">
+                        <div class="description">O (CPU)</div>
+                        <div class="info" id="CPU-score">00</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="end-game-area hide" id="owon">
+            <div class="end-game o-won">
+                <span>You won</span>
+                <div class="end-text orange"><img src="./images/oimage.png" alt="" class="winner"> TAKES THE ROUND</div>           
+                <div class="buttons"> 
+                    <button class="quit">QUIT</button>
+                    <button class="next">NEXT ROUND</button>
+                </div>           
+            </div>
+        </div>
+
+        <div class="end-game-area hide" id="xwon">
+            <div class="end-game x-won">
+                <span>You won</span>
+                <div class="end-text blue"><img src="./images/xiamge.png" alt="" class="winner"> TAKES THE ROUND</div>           
+                <div class="buttons"> 
+                    <button class="quit">QUIT</button>
+                    <button class="next">NEXT ROUND</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="end-game-area hide" id="tied">
+            <div class="end-game">
+                <span>Nobody won</span>
+                <div class="end-text blue"> TIED MATCH </div>           
+                <div class="buttons"> 
+                    <button class="quit">QUIT</button>
+                    <button class="next">NEXT ROUND</button>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+</html>

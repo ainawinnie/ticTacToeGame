@@ -1,0 +1,136 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 30%;
+    height: 100vh;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 10%;
+
+}
+
+.turn {
+    background-color: var(--tileBackground);
+    color: var(--gray);
+
+    width: 5em;
+    padding: 0.2em;
+    text-align: center;
+
+    border-radius: 0.2em;
+    box-shadow: 0px 1px 2px  black;
+    cursor: pointer;
+}
+
+
+.restart {
+    background-color: var(--gray);
+
+    padding: 0.2em;
+    border-radius: 0.2em;
+    box-shadow: 0px 1px 2px black;
+
+    cursor: pointer;
+}
+
+.restart-icon {
+    border-radius: 0;
+    box-shadow: none;    
+}
+
+.gameboard {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-spacing: 1em;
+}
+
+td {
+    background-color: var(--tileBackground);
+    text-align: center;
+    
+    width: 3em;
+    height: 3em;
+
+    border-radius: 0.3em;
+    box-shadow: 0px 1px 2px black;
+
+    cursor: pointer;
+
+}
+
+.tile:hover {
+    background-color: gray;
+    opacity: 15%;
+    
+}
+.won-macthes {
+    background-color: var(--cyan);
+}
+
+.tied-matches {
+    background-color: var(--gray);
+}
+
+.lost-matches {
+    background-color: var(--orange);
+}
+
+.description {
+    color: var(--mainBackground);
+    font-size: 0.7em;
+}
+
+.info {
+    color: var(--mainBackground);
+}
+
+.hide {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.end-game-area {
+    position: absolute;
+
+}
+.end-game {
+    background-color: var(--tileBackground);
+    opacity: 70%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 3%;
+
+    height: 20vh;
+}
+
+.end-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 60%;
+}
+
+.end-game img {
+    width: 15%;
+}
