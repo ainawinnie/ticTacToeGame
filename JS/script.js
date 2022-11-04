@@ -27,23 +27,19 @@ let column1 = 0;
 let column2 = 0;
 let column3=0; */
 
-function game() {
-    
-    
+function game() { 
     document.addEventListener('click', function(e) {
-        console.log(e)
         markTile(player, e);
         winner = checksWinner(player);
-        player = definesPlayer(player, e);
-        countScore (winner);
         quit(e);
         restart(e);        
+        countScore (winner);
+        player = definesPlayer(player, e);
     })
 }
 
 function definesPlayer(player, e) {
     if (e.path[0].classList.contains('tile')) {
-        console.log(e.path[0])
         if (player == 'x' && e.path[0].innerHTML == '<img src="./images/xiamge.png" alt="" width="20px">') {
             player = 'o';
             turn.innerHTML = 'O';
@@ -100,11 +96,11 @@ function checksWinner (player) {
         tied.classList.toggle('hide');
         return winner
     }
-
     
 }
 
 function countScore (winner) {
+
 
     if (winner == 'x') {
         playerWins += 1;
@@ -122,17 +118,15 @@ function countScore (winner) {
 }
 
 function restart (e) {
-    console.log(e.path[0].classList)
     if (e.path[0].classList.contains('restart') || e.path[0].classList.contains('next')) {
-        console.log('aqui')
         tile.forEach (function(element) {
             element.innerHTML = '';
-            playerWins = 0;
-            cpuWins = 0;
-            tiedMatches = 0;
             xWonArea.classList.add('hide');
             oWonArea.classList.add('hide');
             tied.classList.add('hide');
+            winner = '';
+            player = 'x';
+            turn.innerHTML = 'X';
         })
     }
 }
@@ -153,4 +147,5 @@ function quit (e) {
         })
     }
 }
+
 game()

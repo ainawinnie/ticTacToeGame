@@ -47,21 +47,21 @@
             </tr>
             <tr class="scores">
                 <td class="won-macthes"> 
-                    <div class="player">
-                        <div class="description">X (YOU)</div>
+                    <div class="player-1 score-area">
+                        <div class="description">X (Player 1)</div>
                         <div class="info" id="player-score">00</div>
                     </div>
                 </td>
                 <td class="tied-matches">
-                    <div class="tied">
+                    <div class="tied score-area">
                         <div class="description">TIES</div>
                         <div class="info" id="tied-score">00</div>
                     </div>
                 </td>
                 <td class="lost-matches">
-                    <div class="player">
-                        <div class="description">O (CPU)</div>
-                        <div class="info" id="CPU-score">00</div>
+                    <div class="player-2 score-area">
+                        <div class="description">O (Player 2)</div>
+                        <div class="info" id="player-2-score">00</div>
                     </div>
                 </td>
             </tr>
@@ -70,7 +70,10 @@
         <div class="end-game-area hide" id="owon">
             <div class="end-game o-won">
                 <span>You won</span>
-                <div class="end-text orange"><img src="./images/oimage.png" alt="" class="winner"> TAKES THE ROUND</div>           
+                <div class="end-text orange">
+                    <img src="./images/oimage.png" alt="" class="winner">
+                    <p>TAKES THE ROUND</p>
+                </div>           
                 <div class="buttons"> 
                     <button class="quit">QUIT</button>
                     <button class="next">NEXT ROUND</button>
@@ -81,7 +84,10 @@
         <div class="end-game-area hide" id="xwon">
             <div class="end-game x-won">
                 <span>You won</span>
-                <div class="end-text blue"><img src="./images/xiamge.png" alt="" class="winner"> TAKES THE ROUND</div>           
+                <div class="end-text blue">
+                    <img src="./images/xiamge.png" alt="" class="winner"> 
+                    <p>TAKES THE ROUND</p>
+                </div>           
                 <div class="buttons"> 
                     <button class="quit">QUIT</button>
                     <button class="next">NEXT ROUND</button>
@@ -89,10 +95,13 @@
             </div>
         </div>
 
-        <div class="end-game-area hide" id="tied">
+        <div class="end-game-area hide " id="tied">
             <div class="end-game">
                 <span>Nobody won</span>
-                <div class="end-text blue"> TIED MATCH </div>           
+                <div class="end-text blue"> 
+                    <img src="./images/tied.png" alt="" class="tied-img"> 
+                    <p>TIED MATCH</p>
+                </div>           
                 <div class="buttons"> 
                     <button class="quit">QUIT</button>
                     <button class="next">NEXT ROUND</button>
